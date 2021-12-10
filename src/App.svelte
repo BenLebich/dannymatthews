@@ -32,7 +32,8 @@
     slidesPerView={1}
     on:slideChange={() => console.log("slide change")}
     on:swiper={onSwiper}
-    mousewheel
+    mousewheel={{sensitivity: .5}}
+	speed={750}
   >
     <SwiperSlide>
 		<div class="page">
