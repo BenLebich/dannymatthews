@@ -1,0 +1,114 @@
+<script>
+  import { Navigation, Pagination, Scrollbar, A11y, Mousewheel } from "swiper";
+  import { Swiper, SwiperSlide } from "swiper/svelte";
+
+  // Import Swiper styles
+  import "swiper/css";
+  import "swiper/css/navigation";
+  import "swiper/css/pagination";
+  import "swiper/css/scrollbar";
+
+  let swiper = null;
+
+  function onSwiper(e) {
+    const [s] = e.detail;
+    swiper = s;
+  }
+  $: console.log(swiper);
+
+  function goTo(page) {
+	  try {
+		swiper.slideTo(page);
+	  } catch (err) {
+		  console.log(err)
+	  }
+	
+  }
+</script>
+
+<main>
+  <Swiper
+    modules={[Navigation, A11y, Scrollbar, Mousewheel]}
+    slidesPerView={1}
+    on:slideChange={() => console.log("slide change")}
+    on:swiper={onSwiper}
+    mousewheel
+  >
+    <SwiperSlide>
+		<div class="page">
+			<div class="title">Page: Home</div>
+			<div class="slide-link" on:click={()=> {goTo(0)}}>Home</div>
+			<div class="slide-link" on:click={()=> {goTo(1)}}>Videos</div>
+			<div class="slide-link" on:click={()=> {goTo(2)}}>About</div>
+			<div class="slide-link" on:click={()=> {goTo(3)}}>Services</div>
+			<div class="slide-link" on:click={()=> {goTo(4)}}>Contact</div>
+      	</div>
+	</SwiperSlide>
+    <SwiperSlide>
+		<div class="page">
+			<div class="title">Page: Videos</div>
+			<div class="slide-link" on:click={()=> {goTo(0)}}>Home</div>
+			<div class="slide-link" on:click={()=> {goTo(1)}}>Videos</div>
+			<div class="slide-link" on:click={()=> {goTo(2)}}>About</div>
+			<div class="slide-link" on:click={()=> {goTo(3)}}>Services</div>
+			<div class="slide-link" on:click={()=> {goTo(4)}}>Contact</div>
+      	</div>
+	</SwiperSlide>
+	<SwiperSlide>
+		<div class="page">
+			<div class="title">Page: About</div>
+			<div class="slide-link" on:click={()=> {goTo(0)}}>Home</div>
+			<div class="slide-link" on:click={()=> {goTo(1)}}>Videos</div>
+			<div class="slide-link" on:click={()=> {goTo(2)}}>About</div>
+			<div class="slide-link" on:click={()=> {goTo(3)}}>Services</div>
+			<div class="slide-link" on:click={()=> {goTo(4)}}>Contact</div>
+      	</div>
+	</SwiperSlide>
+	<SwiperSlide>
+		<div class="page">
+			<div class="title">Page: Services</div>
+			<div class="slide-link" on:click={()=> {goTo(0)}}>Home</div>
+			<div class="slide-link" on:click={()=> {goTo(1)}}>Videos</div>
+			<div class="slide-link" on:click={()=> {goTo(2)}}>About</div>
+			<div class="slide-link" on:click={()=> {goTo(3)}}>Services</div>
+			<div class="slide-link" on:click={()=> {goTo(4)}}>Contact</div>
+      	</div>
+	</SwiperSlide>
+	<SwiperSlide>
+		<div class="page">
+			<div class="title">Page: Contact</div>
+			<div class="slide-link" on:click={()=> {goTo(0)}}>Home</div>
+			<div class="slide-link" on:click={()=> {goTo(1)}}>Videos</div>
+			<div class="slide-link" on:click={()=> {goTo(2)}}>About</div>
+			<div class="slide-link" on:click={()=> {goTo(3)}}>Services</div>
+			<div class="slide-link" on:click={()=> {goTo(4)}}>Contact</div>
+      	</div>
+	</SwiperSlide>
+
+  </Swiper>
+</main>
+
+<style>
+  main {
+    text-align: center;
+  }
+  .page {
+    height: 90vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  }
+
+  .title {
+	  padding: 20px;
+  }
+
+  .slide-link {
+	  padding: 10px;
+	  background-color: #4D0013;
+	  color: white;
+	  width: 100px;
+	  cursor: pointer;
+  }
+
+</style>
