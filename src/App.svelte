@@ -53,7 +53,7 @@
 			<div class="slide-link" on:click={()=> {goTo(2)}}>About</div>
 			<div class="slide-link" on:click={()=> {goTo(3)}}>Services</div>
 			<div class="slide-link" on:click={()=> {goTo(4)}}>Contact</div>
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/E4Qyt10AZZo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<iframe height="315" src="https://www.youtube.com/embed/E4Qyt10AZZo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       	</div>
 	</SwiperSlide>
 	<SwiperSlide>
