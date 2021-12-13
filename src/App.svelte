@@ -36,7 +36,7 @@
 	speed={750}
   >
     <SwiperSlide>
-		<div class="page">
+		<div class="page page-1">
 			<div class="title">Page: Home</div>
 			<div class="slide-link" on:click={()=> {goTo(0)}}>Home</div>
 			<div class="slide-link" on:click={()=> {goTo(1)}}>Videos</div>
@@ -46,7 +46,7 @@
       	</div>
 	</SwiperSlide>
     <SwiperSlide>
-		<div class="page">
+		<div class="page page-2">
 			<div class="title">Page: Videos</div>
 			<div class="slide-link" on:click={()=> {goTo(0)}}>Home</div>
 			<div class="slide-link" on:click={()=> {goTo(1)}}>Videos</div>
@@ -94,7 +94,7 @@
     text-align: center;
   }
   .page {
-    height: 90vh;
+    height: 100vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -110,6 +110,20 @@
 	  color: white;
 	  width: 100px;
 	  cursor: pointer;
+  }
+
+  .page-1 {
+	  background-image: url("/images/1.jpg");
+	  background-size: contain;
+	  background-position: center;
+	  background-repeat: no-repeat;
+  }
+
+  .page-2 {
+	  background-image: url("/images/2.jpg");
+	  background-size: contain;
+	  background-position: center;
+	  background-repeat: no-repeat;
   }
 
 </style>
