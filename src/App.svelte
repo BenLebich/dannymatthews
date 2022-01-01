@@ -91,7 +91,7 @@
 
   }
   .page {
-    height: 100vh;
+    height: 100%;
   }
 
   .page .padding {
