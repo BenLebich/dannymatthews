@@ -1,6 +1,8 @@
 <script>
   import { Navigation, Pagination, Scrollbar, A11y, Mousewheel } from "swiper";
   import { Swiper, SwiperSlide } from "swiper/svelte";
+  import Home from "./pages/Home.svelte";
+  import Videos from "./pages/Videos.svelte";
 
   // Import Swiper styles
   import "swiper/css";
@@ -36,24 +38,17 @@
 	speed={750}
   >
     <SwiperSlide>
-		<div class="page page-1">
-			<div class="title">Page: Home</div>
-			<div class="slide-link" on:click={()=> {goTo(0)}}>Home</div>
-			<div class="slide-link" on:click={()=> {goTo(1)}}>Videos</div>
-			<div class="slide-link" on:click={()=> {goTo(2)}}>About</div>
-			<div class="slide-link" on:click={()=> {goTo(3)}}>Services</div>
-			<div class="slide-link" on:click={()=> {goTo(4)}}>Contact</div>
+		<div class="page">
+			<div class="padding">
+				<Home goTo={goTo} />
+			</div>	
       	</div>
 	</SwiperSlide>
     <SwiperSlide>
-		<div class="page page-2">
-			<div class="title">Page: Videos</div>
-			<div class="slide-link" on:click={()=> {goTo(0)}}>Home</div>
-			<div class="slide-link" on:click={()=> {goTo(1)}}>Videos</div>
-			<div class="slide-link" on:click={()=> {goTo(2)}}>About</div>
-			<div class="slide-link" on:click={()=> {goTo(3)}}>Services</div>
-			<div class="slide-link" on:click={()=> {goTo(4)}}>Contact</div>
-			<iframe height="315" src="https://www.youtube.com/embed/E4Qyt10AZZo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<div class="page">
+			<div class="padding">
+				<Videos goTo={goTo} />
+			</div>	
       	</div>
 	</SwiperSlide>
 	<SwiperSlide>
@@ -92,39 +87,23 @@
 
 <style>
   main {
-    text-align: center;
+	background-color: burlywood;
+
   }
   .page {
     height: 100vh;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
   }
 
-  .title {
-	  padding: 20px;
+  .page .padding {
+	  padding-left: 50px;
+	  height: 100%;
   }
 
-  .slide-link {
-	  padding: 10px;
-	  background-color: #4D0013;
-	  color: white;
-	  width: 100px;
-	  cursor: pointer;
-  }
-
-  .page-1 {
-	  background-image: url("/images/1.jpg");
-	  background-size: contain;
-	  background-position: center;
-	  background-repeat: no-repeat;
-  }
-
-  .page-2 {
-	  background-image: url("/images/2.jpg");
-	  background-size: contain;
-	  background-position: center;
-	  background-repeat: no-repeat;
+  
+  @media only screen and (max-width: 600px) {
+	  .page .padding {
+		  padding-left: 30px;
+	  }
   }
 
 </style>
