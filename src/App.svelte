@@ -88,10 +88,10 @@
 <style>
   main {
 	background-color: burlywood;
-	height: 100vh
+
   }
   .page {
-    height: 100vh;
+    height: 100%;
   }
 
   .page .padding {
