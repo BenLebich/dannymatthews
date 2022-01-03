@@ -87,7 +87,6 @@
 
 <style>
   main {
-	background-color: burlywood;
 	height: 100%;
   }
   .page {
