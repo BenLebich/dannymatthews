@@ -72,7 +72,7 @@
   }
 
   .content div:last-child {
-      padding-bottom: 80px;
+      padding-bottom: 20px;
   }
 
   @media only screen and (max-width: 1000px) {
