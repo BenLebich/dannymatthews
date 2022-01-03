@@ -63,5 +63,9 @@ button:focus {
 }
 
 .swiper-slide {
-	height: 100vh !important;
+	height: 100% !important;
+}
+
+.swiper {
+	height: 100%;
 }
