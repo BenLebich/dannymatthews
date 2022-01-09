@@ -1,39 +1,105 @@
 <script>
-    export let goTo;
+  export let goTo;
 </script>
 
 <div class="content">
   <div>
-  <div class="title">
-    VIDEOS
+    <div class="title">VIDEOS</div>
+    <div class="videos">
+      <img
+        class="video"
+        src="http://placehold.jp/ffffff/621d1d/300x150.png"
+        alt="video"
+      />
+      <img
+        class="video"
+        src="http://placehold.jp/ffffff/621d1d/300x150.png"
+        alt="video"
+      />
+      <img
+        class="video"
+        src="http://placehold.jp/ffffff/621d1d/300x150.png"
+        alt="video"
+      />
+      <img
+        class="video"
+        src="http://placehold.jp/ffffff/621d1d/300x150.png"
+        alt="video"
+      />
+      <img
+        class="video"
+        src="http://placehold.jp/ffffff/621d1d/300x150.png"
+        alt="video"
+      />
+      <img
+        class="video"
+        src="http://placehold.jp/ffffff/621d1d/300x150.png"
+        alt="video"
+      />
+      <img
+        class="video"
+        src="http://placehold.jp/ffffff/621d1d/300x150.png"
+        alt="video"
+      />
+      <img
+        class="video"
+        src="http://placehold.jp/ffffff/621d1d/300x150.png"
+        alt="video"
+      />
+      <img
+        class="video"
+        src="http://placehold.jp/ffffff/621d1d/300x150.png"
+        alt="video"
+      />
+      <img
+        class="video"
+        src="http://placehold.jp/ffffff/621d1d/300x150.png"
+        alt="video"
+      />
+      <img
+        class="video"
+        src="http://placehold.jp/ffffff/621d1d/300x150.png"
+        alt="video"
+      />
+      <img
+        class="video"
+        src="http://placehold.jp/ffffff/621d1d/300x150.png"
+        alt="video"
+      />
+      <img
+        class="video hideMobile2"
+        src="http://placehold.jp/ffffff/621d1d/300x150.png"
+        alt="video"
+      />
+      <img
+        class="video hideMobile2"
+        src="http://placehold.jp/ffffff/621d1d/300x150.png"
+        alt="video"
+      />
+      <img
+        class="video hideMobile2"
+        src="http://placehold.jp/ffffff/621d1d/300x150.png"
+        alt="video"
+      />
+      <img
+        class="video hideMobile1 hideMobile2"
+        src="http://placehold.jp/ffffff/621d1d/300x150.png"
+        alt="video"
+      />
+    </div>
   </div>
-  <div class="videos">
-    <img class="video" src="http://placehold.jp/ffffff/621d1d/300x150.png" alt="video" />
-    <img class="video" src="http://placehold.jp/ffffff/621d1d/300x150.png" alt="video" />
-    <img class="video" src="http://placehold.jp/ffffff/621d1d/300x150.png" alt="video" />
-    <img class="video" src="http://placehold.jp/ffffff/621d1d/300x150.png" alt="video" />
-    <img class="video" src="http://placehold.jp/ffffff/621d1d/300x150.png" alt="video" />
-    <img class="video" src="http://placehold.jp/ffffff/621d1d/300x150.png" alt="video" />
-    <img class="video" src="http://placehold.jp/ffffff/621d1d/300x150.png" alt="video" />
-    <img class="video" src="http://placehold.jp/ffffff/621d1d/300x150.png" alt="video" />
-    <img class="video" src="http://placehold.jp/ffffff/621d1d/300x150.png" alt="video" />
-    <img class="video" src="http://placehold.jp/ffffff/621d1d/300x150.png" alt="video" />
-    <img class="video" src="http://placehold.jp/ffffff/621d1d/300x150.png" alt="video" />
-    <img class="video" src="http://placehold.jp/ffffff/621d1d/300x150.png" alt="video" />
-    <img class="video hideMobile2" src="http://placehold.jp/ffffff/621d1d/300x150.png" alt="video" />
-    <img class="video hideMobile2" src="http://placehold.jp/ffffff/621d1d/300x150.png" alt="video" />
-    <img class="video hideMobile2" src="http://placehold.jp/ffffff/621d1d/300x150.png" alt="video" />
-    <img class="video hideMobile1 hideMobile2" src="http://placehold.jp/ffffff/621d1d/300x150.png" alt="video" />
-
-  </div>
-</div>
   <div class="contact">
-    <div on:click={() => {goTo(4)}}>CONTACT US</div>
+    <div
+      on:click={() => {
+        goTo(4);
+      }}
+    >
+      CONTACT US
+    </div>
   </div>
 </div>
 
 <style>
-
   .content {
     display: flex;
     height: 100%;
@@ -44,11 +110,11 @@
   }
 
   .content div:first-child {
-      padding-top: 20px;
+    padding-top: 20px;
   }
 
   .content div:last-child {
-      padding-bottom: 20px;
+    padding-bottom: 20px;
   }
 
   .title {
@@ -67,7 +133,6 @@
     max-width: 1920px;
   }
 
-
   .contact {
     display: flex;
     color: white;
@@ -75,6 +140,7 @@
     flex-direction: row;
     justify-content: center;
     margin-top: -20px;
+    font-size: 20px;
   }
 
   @media only screen and (max-width: 1000px) {
@@ -82,28 +148,25 @@
       display: none;
     }
     .videos {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 5px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 5px;
     }
   }
- 
+
   @media only screen and (max-width: 600px) {
     .content {
       padding-right: 30px;
     }
   }
 
-  
-
   @media only screen and (max-width: 450px) {
     .videos {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 5px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 5px;
     }
 
     .hideMobile2 {
       display: none;
     }
   }
-
 </style>

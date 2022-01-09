@@ -1,8 +1,10 @@
 <script>
+  import { onMount } from 'svelte';
   import { Navigation, Pagination, Scrollbar, A11y, Mousewheel } from "swiper";
   import { Swiper, SwiperSlide } from "swiper/svelte";
   import Home from "./pages/Home.svelte";
   import Videos from "./pages/Videos.svelte";
+  import About from "./pages/About.svelte";
 
   // Import Swiper styles
   import "swiper/css";
@@ -25,6 +27,18 @@
 		  console.log(err)
 	  }
 	
+  }
+
+  let url = ``;
+
+  onMount(() => url = window.location.hash);
+
+  $: console.log(url)
+  $: switch (url) {
+	  case "#home": goTo(0); break;
+	  case "#videos": goTo(1); break;
+	  case "#about": goTo(2); break;
+	  case "#contact": goTo(4); break;
   }
 </script>
 
@@ -53,12 +67,9 @@
 	</SwiperSlide>
 	<SwiperSlide>
 		<div class="page">
-			<div class="title">Page: About</div>
-			<div class="slide-link" on:click={()=> {goTo(0)}}>Home</div>
-			<div class="slide-link" on:click={()=> {goTo(1)}}>Videos</div>
-			<div class="slide-link" on:click={()=> {goTo(2)}}>About</div>
-			<div class="slide-link" on:click={()=> {goTo(3)}}>Services</div>
-			<div class="slide-link" on:click={()=> {goTo(4)}}>Contact</div>
+			<div class="padding">
+				<About goTo={goTo} />
+			</div>
       	</div>
 	</SwiperSlide>
 	<SwiperSlide>
