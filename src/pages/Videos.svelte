@@ -109,8 +109,8 @@
     align-items: center;
   }
 
-  .content div:first-child {
-    padding-top: 20px;
+  .content .title {
+    padding-top: 15px;
   }
 
   .content div:last-child {
