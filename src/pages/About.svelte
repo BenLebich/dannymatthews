@@ -80,8 +80,8 @@
     </div>
     <div class="mobile">
       <div class="line">
-        <svg width="2" height="330" viewBox="0 0 2 330" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <line x1="1" y1="4.37114e-08" x2="0.99998" y2="330" stroke="#89898955" stroke-width="2"/>
+        <svg width="2" height="290" viewBox="0 0 2 290" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="1" y1="4.37114e-08" x2="0.99998" y2="290" stroke="#89898955" stroke-width="2"/>
         </svg>
           
       </div>
@@ -247,8 +247,8 @@
     }
 
     .column div {
-      padding-top: 2px;
-      padding-bottom: 2px;
+      padding-top: 1px;
+      padding-bottom: 1px;
       font-size: 11px;
     }
 
@@ -256,7 +256,7 @@
     .profile {
       padding-right: 0px;
       padding-top: 20px;
-      padding-bottom: 20px;
+      padding-bottom: 10px;
     }
 
     .center {
