@@ -240,6 +240,7 @@
     .mobile {
       min-width: 400px;
       display: block;
+      padding-bottom: 10px;
     }
 
     .timeline {
@@ -300,7 +301,9 @@
     .mobile {
       min-width: 100%;
     }
+  }
 
+  @media only screen and (max-width: 300px) {
     .left {
       padding-left: 0px !important;
     }
