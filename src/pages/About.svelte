@@ -7,7 +7,7 @@
     <div class="profile">
       <img
         class="video"
-        src="http://placehold.jp/ffffff/621d1d/150x150.png"
+        src="http://placehold.jp/ffffff/621d1d/120x120.png"
         alt="video"
       />
     </div>
@@ -79,36 +79,33 @@
       </div>
     </div>
     <div class="mobile">
-      <div class="row">
-        <div>EDITED PROMOS</div>
-        <div>CONTINUED EDITING FOR COMPANYS</div>
-        <div>STARTED WORKING WITH ARTISTS</div>
-        <div>EDITING FOR YOUTUBERS</div>
+      <div class="line">
+        <svg width="2" height="330" viewBox="0 0 2 330" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="1" y1="4.37114e-08" x2="0.99998" y2="330" stroke="#89898955" stroke-width="2"/>
+        </svg>
+          
       </div>
-      <div class="row">
-        <div>BECAME A VIDEO EDITOR</div>
+      <div class="column">
+        <div class="far-right">2017-2018</div>
+        <div class="center"><div>BECAME A VIDEO EDITOR</div></div>
+        <div class="left" style="padding-left: 40px;">EDITED PROMOS</div>
+        <div class="right" style="padding-right: 50px;">BECAME A MOTION DESIGNER</div>
+        <div class="center"><div>STARTED AS A WEDDING VIDEOGRAPHER</div></div>
+        <div class="far-right">2018</div>
+        <div class="left" style="padding-left: 20px;">CONTINUED EDITING FOR COMPANYS</div>
+        <div class="right" style="padding-right: 60px;">VISITED PAPUA NEW GUINEA FOR VIDEO PROJECT</div>
+        <div class="far-right">2018-2019</div>
+        <div class="center"><div>CREATED COMPANY</div></div>
+        <div class="far-right">2019-2020</div>
+        <div class="left" style="padding-left: 40px;">STARTED WORKING WITH ARTISTS</div>
+        <div class="right" style="padding-right: 60px;">FOUND SMALL BRANDS TO WORK WITH</div>
+        <div class="center"><div>TRAVELED THE USA FOR PROJECTS</div></div>
+        <div class="far-right">2020-2021</div>
+        <div class="left"style="padding-left: 20px;">EDITING FOR YOUTUBERS</div>
+        <div class="right" style="padding-right: 100px;">CREATED OVER 100 VIDEOS</div>
+        <div class="far-right">2021-PRESENT</div>
+        <div class="center"><div>STILL CREATING</div></div>
 
-        <div>STARTED AS A WEDDING VIDEOGRAPHER</div>
-
-        <div>CREATED COMPANY</div>
-
-        <div>TRAVELED THE USA FOR PROJECTS</div>
-
-        <div>STILL CREATING</div>
-      </div>
-      <div class="row">
-        <div>BECAME A MOTION DESIGNER</div>
-        <div>VISITED PAPUA NEW GUINEA FOR VIDEO PROJECT</div>
-        <div>FOUND SMALL BRANDS TO WORK WITH</div>
-        <div>CREATED OVER 100 VIDEOS</div>
-      </div>
-      <div class="row">
-        <div>2017-2018</div>
-        <div>2018</div>
-        <div>2018-2019</div>
-        <div>2019-2020</div>
-        <div>2020-2021</div>
-        <div>2021-PRESENT</div>
       </div>
     </div>
   </div>
@@ -211,6 +208,10 @@
     padding-bottom: 20px;
   }
 
+  .contact {
+    padding-bottom: 20px;
+  }
+
   .info {
     padding-bottom: 50px;
     color: black;
@@ -220,96 +221,92 @@
   }
 
   @media only screen and (max-width: 1750px) {
+
+    .line {
+      position: absolute;
+      left: 50%;
+      z-index: 1;
+      padding-top: 35px;
+    }
+
     .timeline {
       margin: unset;
+      width: 100%;
     }
 
     .desktop {
       display: none;
     }
     .mobile {
-      display: flex;
-      margin-left: 160px;
-      height: 70%;
+      min-width: 400px;
+      display: block;
     }
 
     .timeline {
       flex-direction: column;
     }
 
+    .column div {
+      padding-top: 2px;
+      padding-bottom: 2px;
+      font-size: 11px;
+    }
+
+
     .profile {
       padding-right: 0px;
-    }
-
-    .mobile .row {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .timeline .mobile .row:nth-of-type(1) {
       padding-top: 50px;
-      padding-bottom: 100px;
-      margin-right: -200px;
+      padding-bottom: 20px;
     }
 
-    .timeline .mobile .row:nth-of-type(2) {
-      padding-top: 10px;
+    .center {
       color: white;
-
+      display: flex;
+      justify-content: center;
     }
 
-    .timeline .mobile .row:nth-of-type(3) {
-      margin-left: -200px;
-      padding-top: 80px;
-      padding-bottom: 50px;
+    .center div {
+      background-color: burlywood;
+      width: fit-content;
+      z-index: 2;
     }
 
-    .timeline .mobile .row:nth-of-type(4) {
-      color: white;
-      font-size: 12px;
-
+    .far-right {
+      text-align: right;
+      color: beige;
+      font-size: 10px;
     }
+
+    .right {
+      text-align: right;
+    }
+
+
+
   }
 
   @media only screen and (max-width: 800px) {
     .content {
       padding-right: 30px;
     }
-
-
-    .mobile {
-      display: flex;
-      margin-left: 0px;
-      font-size: 10px;
-    }
-
-    .timeline .mobile .row:nth-of-type(1) {
-      padding-top: 50px;
-      padding-bottom: 100px;
-      margin-right: -100px;
-    }
-
-
-
-    .timeline .mobile .row:nth-of-type(3) {
-      margin-left: -100px;
-      padding-top: 80px;
-      padding-bottom: 50px;
-    }
-
-    .timeline .mobile .row:nth-of-type(4) {
-      font-size: 10px;
-    }
-
-    .timeline {
-      height: 80%;
-    }
-
+    
     .footer .info {
       font-size: 12px;
       padding-bottom: 10px;
+    }
+  }
+
+  @media only screen and (max-width: 400px) {
+    .mobile {
+      min-width: 100%;
+    }
+
+    .left {
+      padding-left: 0px !important;
+    }
+
+    .right {
+      padding-right: 0px !important;
     }
   }
 </style>
