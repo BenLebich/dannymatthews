@@ -255,7 +255,7 @@
 
     .profile {
       padding-right: 0px;
-      padding-top: 50px;
+      padding-top: 20px;
       padding-bottom: 20px;
     }
 
@@ -291,7 +291,7 @@
     }
     
     .footer .info {
-      font-size: 12px;
+      font-size: 10px;
       padding-bottom: 10px;
     }
   }
